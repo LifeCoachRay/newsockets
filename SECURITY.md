@@ -1,6 +1,6 @@
 # Security Guidelines
 
-Please contact us directly at **security@3rd-Eden.com** for any bug that might
+Please contact us directly at **support@mypockettokenfoundation.org** for any bug that might
 impact the security of this project. Please prefix the subject of your email
 with `[security]` in lowercase and square brackets. Our email filters will
 automatically prevent these messages from being moved to our spam box.
