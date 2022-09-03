@@ -1,7 +1,7 @@
 # Ns: a Node.js NewSockets library
 
 NS is a simple to use, blazing fast, and thoroughly tested NewSockets client and
-server implementation. A NewSockets Fork.
+server implementation. A WebSocket Fork.
 
 Passes the quite extensive Autobahn test suite: [server][server-report],
 [client][client-report].
