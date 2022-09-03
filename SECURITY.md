@@ -17,10 +17,6 @@ us the benefit of the doubt as it's possible that we haven't seen it yet. In
 this case please send us a message **without details** using one of the
 following methods:
 
-- Contact the lead developers of this project on their personal e-mails. You can
-  find the e-mails in the git logs, for example using the following command:
-  `git --no-pager show -s --format='%an <%ae>' <gitsha>` where `<gitsha>` is the
-  SHA1 of their latest commit in the project.
 - Create a GitHub issue stating contact details and the severity of the issue.
 
 Once we have acknowledged receipt of your report and confirmed the bug ourselves
