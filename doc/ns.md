@@ -324,18 +324,18 @@ Create a new NewSockets instance.
 
 #### UNIX Domain Sockets
 
-`ws` supports making requests to UNIX domain sockets. To make one, use the
+`ns` supports making requests to UNIX domain sockets. To make one, use the
 following URL scheme:
 
 ```
-ws+unix:///absolute/path/to/uds_socket:/pathname?search_params
+ns+unix:///absolute/path/to/uds_socket:/pathname?search_params
 ```
 
 Note that `:` is the separator between the socket path and the URL path. If the
 URL path is omitted
 
 ```
-ws+unix:///absolute/path/to/uds_socket
+ns+unix:///absolute/path/to/uds_socket
 ```
 
 it defaults to `/`.
