@@ -1,4 +1,4 @@
-# ws: a Node.js NewSockets library
+# Ns: a Node.js NewSockets library
 
 NS is a simple to use, blazing fast, and thoroughly tested NewSockets client and
 server implementation. A NewSockets Fork.
@@ -10,7 +10,7 @@ Passes the quite extensive Autobahn test suite: [server][server-report],
 reference to a back end with the role of a client in the NewSockets
 communication. To make the same code work seamlessly on Node.js and the browser, you
 can use one of the many wrappers available on npm, like
-[isomorphic-ws](https://github.com/heineiuo/isomorphic-ws).
+[isomorphic-ns](https://github.com/heineiuo/isomorphic-ns).
 
 ## Table of Contents
 
