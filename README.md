@@ -229,8 +229,8 @@ server.on('upgrade', function upgrade(request, socket, head) {
       nss1.emit('connection', ns, request);
     });
   } else if (pathname === '/bar') {
-    wss2.handleUpgrade(request, socket, head, function done(ns) {
-      wss2.emit('connection', ns, request);
+    nss2.handleUpgrade(request, socket, head, function done(ns) {
+      nss2.emit('connection', ns, request);
     });
   } else {
     socket.destroy();
