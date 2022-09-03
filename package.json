@@ -1,0 +1,59 @@
+{
+  "name": "newsockets",
+  "version": "1.1.1",
+  "description": "Simple to use, blazing fast and thoroughly tested newsockets client and server for Node.js",
+  "keywords": [
+    "HyBi",
+    "Push",
+    "RFC-6455",
+    "WebSocket",
+    "WebSockets",
+    "real-time",
+    "API",
+    "server",
+    "newsockets"
+  ],
+  "homepage": "https://github.com/LifeCoachRay/newsockets",
+  "bugs": "https://github.com/LifeCoachRay/newsockets/issues",
+  "repository": "lifecoachray/newsockets",
+  "author": "Life Coach Ray <support@mypockettokenfoundation.org>",
+  "license": "MIT",
+  "main": "index.js",
+  "browser": "browser.js",
+  "engines": {
+    "node": ">=8.3.0"
+  },
+  "files": [
+    "browser.js",
+    "index.js",
+    "lib/*.js"
+  ],
+  "scripts": {
+    "test": "nyc --reporter=lcov --reporter=text mocha --throw-deprecation test/*.test.js",
+    "integration": "mocha --throw-deprecation test/*.integration.js",
+    "lint": "eslint --ignore-path .gitignore . && prettier --check --ignore-path .gitignore \"**/*.{json,md,yaml,yml}\""
+  },
+  "peerDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^5.0.2"
+  },
+  "peerDependenciesMeta": {
+    "bufferutil": {
+      "optional": true
+    },
+    "utf-8-validate": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "bufferutil": "^4.0.1",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "mocha": "^7.0.0",
+    "nyc": "^15.0.0",
+    "prettier": "^2.0.5",
+    "utf-8-validate": "^5.0.2"
+  }
+}
