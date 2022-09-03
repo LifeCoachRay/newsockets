@@ -133,7 +133,7 @@ const ns = new NewSockets('ns://www.host.com/path', {
 ```js
 const NewSockets = require('ns');
 
-const ns = new WebSocket('ns://www.host.com/path');
+const ns = new NewSockets('ns://www.host.com/path');
 
 ns.on('open', function open() {
   ns.send('something');
