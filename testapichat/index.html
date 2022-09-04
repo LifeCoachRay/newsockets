@@ -1,0 +1,50 @@
+<head></head>
+<body></body>
+<h1>Real Time Messaging</h1>
+<pre id="messages" style="height: 400px; overflow: scroll"></pre>
+<input type="text" id="messageBox" placeholder="Type your message here" style="display: block; width: 100%; margin-bottom: 10px; padding: 10px;" />
+<button id="send" title="Send Message!" style="width: 100%; height: 30px;">Send Message</button>
+
+<script>
+  (function() {
+    const sendBtn = document.querySelector('#send');
+    const messages = document.querySelector('#messages');
+    const messageBox = document.querySelector('#messageBox');
+
+    let ns;
+
+    function showMessage(message) {
+      messages.textContent += `\n\n${message}`;
+      messages.scrollTop = messages.scrollHeight;
+      messageBox.value = '';
+    }
+
+    function init() {
+      if (ns) {
+        ns.onerror = ns.onopen = ns.onclose = null;
+        ns.close();
+      }
+
+      ns = NewSockets('ns://localhost:6969');
+      ns.onopen = () => {
+        console.log('Connection opened!');
+      }
+      ns.onmessage = ({ data }) => showMessage(data);
+      ns.onclose = function() {
+        ns = null;
+      }
+    }
+
+    sendBtn.onclick = function() {
+      if (!ns) {
+        showMessage("No NewSockets connection :(");
+        return ;
+      }
+
+      ns.send(messageBox.value);
+      showMessage(messageBox.value);
+    }
+
+    init();
+  })();
+</script>
